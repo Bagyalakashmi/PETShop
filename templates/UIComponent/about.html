@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "UIComponent/nav2.html" %}
+{% block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Pet At Door  is a Start Up Online Store we opened in year 2018 for Farmers and Pet Lovers. Now Farmers and Pet Lovers Need not to Travel hassle Long Distances to Buy/Sell their Dairy Animals and Pets. Our goal is to provide all kinds of Pets,Poultry , Sheep, Goats  and Diary Animal and their related accessories at Door Step with both a superior customer experience and tremendous value for our customers.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://bloximages.newyork1.vip.townnews.com/petproductnews.com/content/tncms/assets/v3/editorial/b/11/b11ed0fa-3335-11eb-8bd6-d3eae83dafb5/5fc538ee4301f.image.jpg" alt="Jane" style="width:100%;height:100%">
+ >
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://media.gettyimages.com/photos/smiling-female-groomer-with-arms-crossed-standing-in-pet-shop-picture-id1266053607?s=612x612" alt="Mike" style="height:100%;width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://i2-prod.dailyrecord.co.uk/incoming/article5163067.ece/ALTERNATES/s1200c/petshop.jpg" alt="John" style="width:100%;height:100%;">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+</html>

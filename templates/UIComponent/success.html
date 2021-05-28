@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "UIComponent/nav2.html" %}
+{% block content %}
+    <style>
+    html,body {
+        background: #7abecc !important;
+      }
+    .jumbotron{
+        margin-top:100px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    </style>
+    <div class="container">
+    <div class="jumbotron">
+        <div class="alert alert-success">Payments Successfully Paid...</div>
+        <div><a href="{% url 'home' %}" class="btn btn-primary">Home</a></div>
+    </div>
+    </div>
+{% endblock %}
+</html>

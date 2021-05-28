@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<form method="POST">
+    <label>
+        Enter type<input type="text" placeholder="Enter Type"/>
+    </label>
+    {% csrf_token %}
+<input type="submit" value="Submit"/>
+</form>
+    {% if datas is not None %}
+        {% for i in datas %}
+        <label>Select type:
+            <select>
+                <option value="{{ i }}"></option>
+            </select>
+        </label>
+    {% endfor %}
+        {% else %}
+            {% for m in messages %}
+                <p>m</p>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
+
+</body>
+</html>

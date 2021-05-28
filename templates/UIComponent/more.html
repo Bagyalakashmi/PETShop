@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'UIComponent/nav2.html' %}
+{% block content %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<style>
+html,body{
+     background: #7abecc !important;
+}
+.img2{
+    border-radius: 90px;
+}
+.jumbotron{
+    margin-top: 50px;
+}
+</style>
+    <div class="container">
+        <div class="jumbotron">
+            <div><a href="{% url 'home' %}" class="btn btn-primary"><< Back</a></div><br>
+            <table class="table table-striped text-center">
+                <thead class="table table-bordered table-hover">
+                <th scope="col">PET Image</th>
+                <th scope="col">ID</th>
+                <th scope="col">OWNER NAME</th>
+                 <th scope="col">PET NAME</th>
+                <th scope="col">TYPE</th>
+                <th scope="col">CATEGORY</th>
+                <th scope="col">AMOUNT</th>
+                </thead>
+                <tbody>
+                <td><img class="img2" src="{{ info.petImage.url }}" alt="sorry"></td>
+                <td>{{ info.Id }}</td>
+                <td>{{ info.owner }}</td>
+                <td>{{ info.petName }}</td>
+                <td>{{ info.type }}</td>
+                <td>{{ info.category }}</td>
+                <td>{{ info.amount }}</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+</html>

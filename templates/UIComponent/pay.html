@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% block content %}
+	<div class="container">
+<table class="table table-bordered table-hover table-fixed">
+  <thead class="table tableSubHeadingColor bg-info">
+    <tr>
+      <th class="t" colspan="2" >Payment</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr><td>Name</td>
+      <td><input type="text" class="form-control mr-2"  placeholder="Enter Name" name="Name" id="Name" required></tr>
+    <tr>
+
+      <tr><td>Phone</td>
+      <td><input type="text" class="form-control mr-2"  placeholder="Enter Phone Number" name="Phone" id="Phone" required></tr>
+    <tr>
+
+      <tr><td>Gmail</td>
+      <td><input type="email" class="form-control mr-2"  placeholder="Enter email" name="mail" id="mail" required></tr>
+    <tr>
+
+      <td>Bank Name</td>
+      <td><select id="se" class="form-control mr-2">
+              <option>--select--</option>
+              <option>Indian Bank</option>
+              <option>ICICI</option>
+              <option>Indian Overseas Bank</option>
+            </select>
+      </td>
+      </tr>
+     <tr><td>Card No</td>
+      <td><input type="text" class="form-control mr-2"  placeholder="Enter cardno" name="card" id="card" required>
+     </tr>
+
+
+
+  </tbody>
+</table>
+<div class="form-group">
+                <button class="btn btn-success btn-lg  float-right" type="submit">OK</button>
+                <button class="btn btn-success btn-lg mr-3 float-right" type="submit">Cancel</button></div>
+            </div>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'UIComponent/nav2.html' %}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+.t{
+	text-align: center;
+}
+.container{
+	margin-top: 70px;
+	width: 600px;
+  height: 470px;
+  padding-top: 20px;
+  background-color: white;
+
+}
+
+.table{
+	table-layout: fixed;
+
+}
+body{
+  background-color: #b6dbd8;
+
+}
+</style>
+    <script>
+    $(document).ready(function(){
+        $(".ok").click(function(){
+           if($("#name").val().length===0){
+               alert("Enter Name");
+               return false;
+           }
+           if(!($("#Phone").val().length>0 && $("#Phone").val().length<=10)){
+               alert("Please Enter phone Number");
+               return false;
+           }
+            const userinput = $("#mail").val();
+            const pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+            if(!pattern.test(userinput)) {
+                    alert('not a valid e-mail address');
+                    return false;
+                }
+            if($("#se").val()==="--select--"){
+                alert("Please Select Bank");
+                return false;
+            }
+            if($("#card").val().length!==13 ||$("#card").val().length===0 ){
+                alert("Please Enter Valid 13 number")
+                return false;
+            }
+
+        });
+
+      });
+    </script>
+	<div class="container">
+<table class="table table-bordered table-hover table-fixed">
+  <thead class="table tableSubHeadingColor bg-info">
+    <tr>
+      <th class="t" colspan="2" >Payment</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr><td>Name</td>
+      <td><input type="text" class="form-control mr-2"  placeholder="Enter Name" name="name" id="name" required></tr>
+    <tr>
+
+      <tr><td>Phone</td>
+      <td><input type="text" class="form-control mr-2"  placeholder="Enter Phone Number" name="Phone" id="Phone" required></tr>
+    <tr>
+
+      <tr><td>Gmail</td>
+      <td><input type="email" class="form-control mr-2"  placeholder="Enter email" name="mail" id="mail" required></tr>
+    <tr>
+
+      <td>Bank Name</td>
+      <td><select id="se" class="form-control mr-2">
+              <option>--select--</option>
+              <option>Indian Bank</option>
+              <option>ICICI</option>
+              <option>Indian Overseas Bank</option>
+            </select>
+      </td>
+      </tr>
+     <tr><td>Card No</td>
+      <td><input type="text" class="form-control mr-2"  placeholder="Enter cardno" name="card" id="card" required>
+     </tr>
+  </tbody>
+</table>
+<div class="form-group">
+                <a href="{% url 'success' %}" class="btn btn-success btn-lg  float-right ok">OK</a>
+                <a href="{% url 'home' %}" class="btn btn-success btn-lg mr-3 float-right">Cancel</a></div>
+            </div>
+{% endblock %}
+</html>
